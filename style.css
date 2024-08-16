@@ -1,0 +1,119 @@
+body{
+    background-color: #0c1014;
+    color: white;
+    width: 90%;
+    max-width: 960px;
+    margin: 0 auto;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    background-color: #1f262c;
+    padding: 16px;
+    align-items: center;
+}
+
+.header__logo{
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 42px;
+}
+
+.header__links{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 16px;
+    font-size: 18px;
+}
+
+.header__links a{
+    /* a tag a é descendente da classe header__links*/
+    text-decoration: none;
+    color: white;
+    padding: 14px;
+    border-radius: 6px;
+}
+
+.header__links a:hover{
+    text-decoration: underline;
+}
+
+a.header__links--active{
+    /*a tag a contém a classe header__links--active*/
+    background-color: #cbe300;
+    color: #1f262c; /*houve problema de especificidade para aplicar a propriedade color*/
+    pointer-events: none;
+}
+.main-title{
+    text-transform: uppercase;
+    font-size: 62px;
+    text-align: center;
+    margin: 100px 0;
+    text-shadow: 0px 5px 5px black;
+}
+
+.pricing{
+    display: flex;
+    gap: 16px;
+}
+
+.pricing-plan{
+    flex: 1; /* mesma coisa que flex-grow: 1; flex-shrink: 0; e flex-basis: 0; */
+    background-color: #1f262c;
+    padding: 30px;
+    border-radius: 6px;
+    box-shadow: 0 5px 15px -6px black;
+    display: flex;
+    flex-direction: column;
+}
+
+.pricing-plan__title{
+    text-transform: uppercase;
+    border-bottom: 2px solid #cbe300;
+    margin: 0 0 20px;
+    padding-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+.pricing-plan p{
+    margin-top: 0;
+    font-size: 20px;
+}
+
+.pricing-plan__price{
+    font-size: 34px;
+}
+
+.pricing-plan__features{
+    color: #b5b5b5;
+    margin: 0 0 36px;
+    padding: 16px;
+    line-height: 1.8;
+    flex: 1;
+}
+
+.pricing-plan__features li::marker{
+    color: #cbe300;
+}
+
+.pricing-plan__cta{
+    text-decoration: none;
+    color: #0c1014;
+    background-color: #cbe300;
+    border-radius: 6px;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 16px;
+    text-align: center;
+}
+
+.pricing-plan__cta:hover{
+    outline: 2px solid #cbe300;
+    background-color: transparent;
+    color: white;
+}
